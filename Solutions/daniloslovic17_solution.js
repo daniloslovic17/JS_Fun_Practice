@@ -24,3 +24,9 @@ const sub = (...nums) => nums.reduce((accumulator, currentValue) => accumulator 
 
 // Write a function mul that is generalized for any amount of arguments
 const mul = (...nums) => nums.reduce((accumulator, currentValue) => accumulator * currentValue, 1);
+
+// Write a function min that is generalized for any amount of arguments
+const min = (...nums) => nums.reduce((accumulator, currentValue) => (currentValue < accumulator ? currentValue : accumulator));
+
+// Write a function max that is generalized for any amount of arguments
+const max = (...nums) => nums.reduce((accumulator, currentValue) => (currentValue < accumulator ? accumulator : currentValue));
