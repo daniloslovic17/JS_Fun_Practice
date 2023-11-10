@@ -30,3 +30,9 @@ const min = (...nums) => nums.reduce((accumulator, currentValue) => (currentValu
 
 // Write a function max that is generalized for any amount of arguments
 const max = (...nums) => nums.reduce((accumulator, currentValue) => (currentValue < accumulator ? accumulator : currentValue));
+
+// Write a function addRecurse that is the generalized add function but uses recursion
+const addRecurse = (...nums) => nums.length === 0 ? 0 : nums[0] + addRecurse(...nums.slice(1));
+
+// Write a function mulRecurse that is the generalized mul function but uses recursion
+const mulRecurse = (...nums) => nums.length === 0 ? 1 : nums[0] * mulRecurse(...nums.slice(1));
