@@ -47,3 +47,16 @@ const maxRecurse = (...nums) => nums.length === 0 ? -Infinity : nums[0] > maxRec
 const not = (func) => {
           return !func();
 		}
+
+// Write a function acc that takes a function and an initial value and returns a function that runs the initial function on each argument, accumulating the result
+const acc = (func, initial) => {
+  return function (...args) {
+    let result = initial;
+
+    args.forEach((arg) => {
+      result = func(result, arg);
+    });
+
+    return result;
+  };
+};
