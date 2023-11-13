@@ -42,3 +42,8 @@ const minRecurse = (...nums) => nums.length === 0 ? Infinity : nums[0] < minRecu
 
 // Write a function maxRecurse that is the generalized max function but uses recursion
 const maxRecurse = (...nums) => nums.length === 0 ? -Infinity : nums[0] > maxRecurse(...nums.slice(1)) ? nums[0] : maxRecurse(...nums.slice(1));
+
+// Write a function not that takes a function and returns the negation of its result
+const not = (func) => {
+          return !func();
+		}
